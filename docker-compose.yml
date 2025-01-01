@@ -9,7 +9,7 @@ services:
       - PORT=8081
       - HOST=0.0.0.0
       - ENV=prod
-      - WEBUI_SECRET_KEY=supersecretkey123
+      - WEBUI_SECRET_KEY=${WEBUI_SECRET_KEY}
     ports:
       - "5000:8081"
     volumes:
