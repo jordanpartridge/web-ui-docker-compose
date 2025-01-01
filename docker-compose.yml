@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    environment:
+      - OLLAMA_API_BASE_URL=http://192.168.2.123:11434/api
+      - OLLAMA_BASE_URL=http://192.168.2.123:11434
+      - PORT=8081
+      - HOST=0.0.0.0
+      - ENV=prod
+      - WEBUI_SECRET_KEY=supersecretkey123
+      - DISABLE_UPDATE_CHECK=true
+      - LOG_LEVEL=debug
+    ports:
+      - "5000:8081"
+    volumes:
+      - open-webui:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  open-webui:

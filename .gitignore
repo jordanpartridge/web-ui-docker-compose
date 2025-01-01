@@ -1,0 +1,16 @@
+# Docker volumes
+data/
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+._*
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
